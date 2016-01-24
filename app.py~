@@ -21,7 +21,7 @@ class RequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         def do_GET(self):
 	    self.full_path = os.getcwd() + self.path
 	    try:
-		if self.path=='/':
+		if self.full_path =='/':
 		    self.wfile.write(self.Page)
 		else:
 		    with open(self.full_path, "rb") as reader:
